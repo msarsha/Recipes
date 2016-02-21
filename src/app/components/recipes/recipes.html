@@ -1,6 +1,13 @@
-  <md-list>
-		<md-list-item ng-repeat="r in vm.recipes" flex>
-
-			<h4>test</h4>
-		</md-list-item>
-  </md-list>
+<md-list>
+  <md-list-item class="md-2-line" ng-repeat="r in vm.recipes" class="recipe-item">
+    <img ng-src="{{r.imagePath}}" class="md-avatar">
+    <div layout="column" class="md-list-item-text">
+      <h3>{{r.title}}</h3>
+      <p>{{r.desc}}</p>
+    </div>
+    <div layout="column" layout-align="center center">
+      <md-icon md-font-icon="fa fa-arrow-left" class="recipe-list-icon"></md-icon>
+    </div>
+    <md-divider inset></md-divider>
+  </md-list-item>
+</md-list>

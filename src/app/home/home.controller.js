@@ -3,7 +3,7 @@ var _ = require('lodash');
 module.exports = function (rbToolbar) {
   var vm = this;
   vm.greeting = "home";
-  rbToolbar.title = "בית";
+  rbToolbar.title = "המתכונים שלי";
 
 	vm.recipes = _.times(15, function (i) {
 		return {
