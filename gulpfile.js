@@ -42,10 +42,6 @@ var b = watchify(browserify(opts));
 
 b.on('update', bundle);
 b.on('log', gutil.log);
-b.on('end', function () {
-	if (serving)
-		browserSync.reload();
-});
 
 gulp.task('build-js', bundle);
 
@@ -64,10 +60,6 @@ function bundle() {
 gulp.task('copy-html', function () {
 	return gulp.src(config.paths.index)
 		.pipe(gulp.dest(config.paths.build))
-});
-
-gulp.task('watch-js', function () {
-	gulp.watch(config.paths.watch, ['build-js'])
 });
 
 gulp.task('serve', function () {

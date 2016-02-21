@@ -5,5 +5,5 @@ require('./<%= name %>.css');
 module.exports = {
   template: template,
   controller: ctrl,
-  controllerAs: vm
+  controllerAs: 'vm'
 };
