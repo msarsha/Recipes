@@ -9,6 +9,7 @@ module.exports = {
 	bindToController: true,
   bindings: {
 		recipes: '<',
-		onDelete: '&'
+		onDelete: '&',
+    filter: '='
 	}
 };

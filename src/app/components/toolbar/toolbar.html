@@ -1,10 +1,24 @@
-<md-toolbar layout="row" class="md-whiteframe-7dp rb-toolbar">
-	<div layout="column" layout-align="center center">
-		<!--<md-button hide-gt-sm ng-click="vm.openSidenav()">-->
-			<!--<md-icon md-font-icon="fa fa-bars fa-2x"></md-icon>-->
-		<!--</md-button>-->
-	</div>
-	<div flex layout-align="start center" layout="row">
-		<h4>{{vm.rbToolbar.title}}</h4>
-	</div>
+<md-toolbar layout="row" class="md-whiteframe-7dp rb-toolbar" layout-padding ng-show="!vm.showSearch">
+  <div flex layout-align="start center" layout="row">
+    <h4>{{vm.rbToolbar.title}}</h4>
+    <span flex></span>
+    <md-button class="md-icon-button" ng-click="vm.showSearch = !vm.showSearch">
+      <md-icon md-font-icon="fa fa-search"></md-icon>
+    </md-button>
+  </div>
+</md-toolbar>
+
+<md-toolbar layout="row" class="md-whiteframe-7dp rb-toolbar md-accent" layout-padding ng-show="vm.showSearch">
+  <div flex layout-align="start center" layout="row">
+    <md-button class="md-icon-button" ng-click="vm.closeFilter()">
+      <md-icon md-font-icon="fa fa-arrow-right"></md-icon>
+    </md-button>
+    <md-input-container flex layout-align="center center" layout="column">
+      <label>&nbsp;</label>
+      <input ng-model="vm.rbToolbar.filter" style="margin-bottom: 25px;" type="text" placeholder="חפש">
+    </md-input-container>
+    <md-button class="md-icon-button">
+      <md-icon md-font-icon="fa fa-search"></md-icon>
+    </md-button>
+  </div>
 </md-toolbar>

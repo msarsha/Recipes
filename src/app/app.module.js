@@ -26,8 +26,12 @@ angular.module('recipesBook', [
 		toolbar.name,
 		sidenav.name,
 		recipes.name
-	])
-	.component('app', appComponent)
-	.config(function ($urlRouterProvider) {
-		$urlRouterProvider.otherwise('/');
-	});
+])
+  .component('app', appComponent)
+  .config(function ($urlRouterProvider, $mdThemingProvider) {
+    $urlRouterProvider.otherwise('/');
+
+    $mdThemingProvider.theme('default')
+      .primaryPalette('red')
+      .accentPalette('indigo');
+  });

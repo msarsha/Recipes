@@ -1,5 +1,5 @@
 <md-list>
-  <md-list-item class="md-2-line" ng-repeat="r in vm.recipes" class="recipe-item">
+  <md-list-item class="md-2-line" ng-repeat="r in vm.recipes | filter: vm.filter" class="recipe-item">
     <img ng-src="{{r.imagePath}}" class="md-avatar">
     <div layout="column" class="md-list-item-text">
       <h3>{{r.title}}</h3>

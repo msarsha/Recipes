@@ -5,4 +5,5 @@
 module.exports = function () {
 	var service = this;
 	service.title = "toolbar";
+  service.filter = "";
 };
