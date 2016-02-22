@@ -10,6 +10,7 @@ module.exports = {
   bindings: {
 		recipes: '<',
 		onDelete: '&',
+    onClick: '&',
     filter: '='
 	}
 };

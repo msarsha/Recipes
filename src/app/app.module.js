@@ -11,21 +11,27 @@ var models = require('./models/models.module');
 
 var appComponent = require('./app.component');
 var home = require('./home/home.module');
+var recipesDetails = require('./recipe/recipe.module');
+
 var toolbar = require('./components/toolbar/toolbar.module');
 var sidenav = require('./components/sidenav/sidenav.module');
 var recipes = require('./components/recipes/recipes.module');
+
+var helpers = require('./helpers/helpers.module');
 
 angular.module('recipesBook', [
 		ngMaterial,
 		uiRouter,
 
-		resources.name,
 		models.name,
+		resources.name,
+    helpers.name,
 
 		home.name,
 		toolbar.name,
 		sidenav.name,
-		recipes.name
+		recipes.name,
+    recipesDetails.name
 ])
   .component('app', appComponent)
   .config(function ($urlRouterProvider, $mdThemingProvider) {

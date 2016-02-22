@@ -1,8 +1,9 @@
 .md-avatar{
+  margin-top: 15px !important;
   margin-left: 15px;
   margin-right: 5px !important;
 }
 
 md-icon[md-font-icon].recipe-list-icon{
-  margin-top: 22px;
+  margin-top: 26px;
 }

@@ -1,0 +1,10 @@
+.recipe-image-cont{
+  width: 100%;
+  height: 150px;
+}
+
+.recipe{ 
+background: -webkit-linear-gradient(rgb(244,67,54), dodgerblue);
+background: -o-linear-gradient(rgb(244,67,54), dodgerblue);
+background: linear-gradient(rgb(244,67,54), dodgerblue);
+}

@@ -5,6 +5,7 @@ module.exports = function (rbToolbar, rbSidenav) {
   vm.rbToolbar = rbToolbar;
   vm.openSidenav = openSidenav;
   vm.closeFilter = closeFilter;
+  vm.goBack = goBack;
 
   function openSidenav(){
     rbSidenav.toggle();
@@ -13,5 +14,9 @@ module.exports = function (rbToolbar, rbSidenav) {
   function closeFilter() {
     vm.showSearch = !vm.showSearch;
     vm.rbToolbar.filter = "";
+  }
+  
+  function goBack() {
+    vm.rbToolbar.goBack();
   }
 };

@@ -1,5 +1,5 @@
-<md-content dir="rtl">
-  <rb-recipes recipes="vm.recipes" filter="vm.rbToolbar.filter"></rb-recipes>
+<md-content>
+  <rb-recipes recipes="vm.recipes" filter="vm.rbToolbar.filter" on-click="vm.goToDetails(id)"></rb-recipes>
   <md-button class="md-fab-bottom-left md-fab md-accent md-raised" layout-align="center center" style="position: fixed">
     <md-icon md-font-icon="fa fa-plus"></md-icon>
   </md-button>

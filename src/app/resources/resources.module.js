@@ -4,4 +4,7 @@
 
 var angular = require('angular');
 
-module.exports = angular.module('recipesBook.models', []);
+var recipesResource = require('./recipes.resource');
+
+module.exports = angular.module('recipesBook.resources', [])
+  .service('recipesResource', recipesResource);

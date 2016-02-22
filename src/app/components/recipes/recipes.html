@@ -1,13 +1,11 @@
 <md-list>
-  <md-list-item class="md-2-line" ng-repeat="r in vm.recipes | filter: vm.filter" class="recipe-item">
+  <md-list-item ng-click="vm.click(r.id)" class="md-2-line recipe-item" ng-repeat="r in vm.recipes | filter: vm.filter">
     <img ng-src="{{r.imagePath}}" class="md-avatar">
-    <div layout="column" class="md-list-item-text">
+    <div layout="column" class="md-list-item-text" layout-align="start start">
       <h3>{{r.title}}</h3>
       <p>{{r.desc}}</p>
     </div>
-    <div layout="column" layout-align="center center">
-      <md-icon md-font-icon="fa fa-arrow-left" class="recipe-list-icon"></md-icon>
-    </div>
+    <md-icon md-font-icon="fa fa-arrow-left" class="recipe-list-icon"></md-icon>
     <md-divider inset></md-divider>
   </md-list-item>
 </md-list>

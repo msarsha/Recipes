@@ -1,17 +1,21 @@
 var _ = require('lodash');
 
-module.exports = function (rbToolbar) {
+module.exports = function (rbToolbar, recipesModel, $state) {
   var vm = this;
 
   vm.rbToolbar = rbToolbar;
   vm.rbToolbar.title = "המתכונים שלי";
+  vm.rbToolbar.showSearch = true;
+  vm.rbToolbar.showBack = false;
   
-	vm.recipes = _.times(15, function (i) {
-		return {
-			id: i,
-			imagePath: 'http://lorempixel.com/400/200/food/',
-			desc: "להקציף, לערבב ולהכניס לתנור",
-			title: "מתכון " + i
-		}
-	})
+  vm.goToDetails = goToDetails;
+  
+  recipesModel.getAll()
+    .then(function (data) {
+      vm.recipes = data
+    });
+
+  function goToDetails(id) {
+    $state.go('recipe', { recipeId: id });
+  }
 };
