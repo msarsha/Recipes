@@ -3,7 +3,7 @@
     <img ng-src="{{r.imagePath}}" class="md-avatar">
     <div layout="column" class="md-list-item-text" layout-align="start start">
       <h3>{{r.title}}</h3>
-      <p>{{r.desc}}</p>
+      <p>{{r.desc | limitTo: 35}}</p>
     </div>
     <md-icon md-font-icon="fa fa-arrow-left" class="recipe-list-icon"></md-icon>
     <md-divider inset></md-divider>

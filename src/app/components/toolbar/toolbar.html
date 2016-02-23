@@ -2,10 +2,10 @@
   <div flex layout-align="start center" layout="row">
     <h4>{{vm.rbToolbar.title}}</h4>
     <span flex></span>
-    <md-button ng-show="vm.rbToolbar.showSearch" class="md-icon-button" ng-click="vm.showSearch = !vm.showSearch">
+    <md-button ng-show="vm.rbToolbar.showSearchButton" class="md-icon-button" ng-click="vm.showSearch = !vm.showSearch">
       <md-icon md-font-icon="fa fa-search"></md-icon>
     </md-button>
-    <md-button ng-show="vm.rbToolbar.showBack" class="md-icon-button" ng-click="vm.goBack()">
+    <md-button ng-show="vm.rbToolbar.showBackButton" class="md-icon-button" ng-click="vm.goBack()">
       <md-icon md-font-icon="fa fa-arrow-left"></md-icon>
     </md-button>
   </div>

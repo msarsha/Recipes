@@ -8,8 +8,8 @@ module.exports = function ($state, rbToolbar) {
   init();
 
   function init() {
-    vm.rbToolbar.showBack = true;
-    vm.rbToolbar.showSearch = false;
+    vm.rbToolbar.showBackButton = true;
+    vm.rbToolbar.showSearchButton = false;
     vm.rbToolbar.title = vm.recipe.title;
   }
 

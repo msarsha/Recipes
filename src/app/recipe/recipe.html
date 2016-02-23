@@ -1,4 +1,38 @@
-<div flex layout-fill class="recipe">
-  <div bg-image="{{vm.recipe.imagePath}}" class="recipe-image-cont md-whiteframe-z2">
+<div flex layout-fill class="recipe" layout="column">
+  <div>
+    <div bg-image="{{vm.recipe.imagePath}}" class="recipe-image-cont md-whiteframe-z2">
+    </div>
+  </div>
+  <div layout="row" flex>
+    <div flex layout="column" class="recipe-text">
+      <h1 class="md-subhead">אופן הכנה</h1>
+      <p class="md-caption">{{vm.recipe.desc}}</p>
+      <md-divider inset></md-divider>
+      <h1 class="md-subhead">מצרכים</h1>
+      <p class="md-caption">{{vm.recipe.desc}}</p>
+      <md-divider inset></md-divider>
+      <h1 class="md-subhead">הערות</h1>
+      <p class="md-caption">{{vm.recipe.desc}}</p>
+    </div>
+    <div flex="35" layout="column" layout-padding class="recipe-gallery">
+      <div class="recipe-thumb">
+        <img class="md-whiteframe-2dp" ng-src="http://lorempixel.com/image_output/food-q-c-100-100-7.jpg">
+      </div>
+      <div class="recipe-thumb">
+        <img class="md-whiteframe-2dp" ng-src="http://lorempixel.com/image_output/food-q-c-100-100-7.jpg">
+      </div>
+      <div class="recipe-thumb">
+        <img class="md-whiteframe-2dp" ng-src="http://lorempixel.com/image_output/food-q-c-100-100-7.jpg">
+      </div>
+      <div class="recipe-thumb">
+        <img class="md-whiteframe-2dp" ng-src="http://lorempixel.com/image_output/food-q-c-100-100-7.jpg">
+      </div>
+      <div class="recipe-thumb">
+        <img class="md-whiteframe-2dp" ng-src="http://lorempixel.com/image_output/food-q-c-100-100-7.jpg">
+      </div>
+      <div class="recipe-thumb">
+        <img class="md-whiteframe-2dp" ng-src="http://lorempixel.com/image_output/food-q-c-100-100-7.jpg">
+      </div>
+    </div>
   </div>
 </div>

@@ -2,7 +2,8 @@ module.exports = function ($state) {
   var service = this;
   service.title = "toolbar";
   service.filter = "";
-  service.showSearch = false;
+  service.showSearchButton = false;
+  service.showBackButton = false;
   service.goBack = goBack;
   service.prevState = "";
 

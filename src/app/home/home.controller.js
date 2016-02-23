@@ -4,16 +4,20 @@ module.exports = function (rbToolbar, recipesModel, $state) {
   var vm = this;
 
   vm.rbToolbar = rbToolbar;
-  vm.rbToolbar.title = "המתכונים שלי";
-  vm.rbToolbar.showSearch = true;
-  vm.rbToolbar.showBack = false;
-  
   vm.goToDetails = goToDetails;
+
+  init();
   
-  recipesModel.getAll()
-    .then(function (data) {
-      vm.recipes = data
+  function init() {
+    vm.rbToolbar.title = "המתכונים שלי";
+    vm.rbToolbar.showSearchButton = true;
+    vm.rbToolbar.showBackButton = false;
+    
+    recipesModel.getAll()
+      .then(function (data) {
+        vm.recipes = data
     });
+  }
 
   function goToDetails(id) {
     $state.go('recipe', { recipeId: id });

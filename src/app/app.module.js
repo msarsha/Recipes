@@ -1,7 +1,3 @@
-/**
- * Created by smata on 18-Feb-16.
- */
-
 var angular = require('angular');
 var ngMaterial = require('angular-material');
 var uiRouter = require('angular-ui-router');
@@ -38,6 +34,6 @@ angular.module('recipesBook', [
     $urlRouterProvider.otherwise('/');
 
     $mdThemingProvider.theme('default')
-      .primaryPalette('red')
-      .accentPalette('indigo');
+      .primaryPalette('teal')
+      .accentPalette('orange');
   });
