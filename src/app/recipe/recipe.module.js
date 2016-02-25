@@ -13,8 +13,11 @@ module.exports = angular.module('recipesBook.recipeDetails', [])
         vm.recipe = recipe;
       },
       resolve: {
-        recipe: function ($stateParams, $q, recipesModel) {
-          return recipesModel.getOne($stateParams.recipeId);
+        recipe: function ($stateParams, $state, recipesModel) {
+          return recipesModel.getOne($stateParams.recipeId)
+            .catch(function () {
+              $state.go('home');
+            });
         }
       }
     })

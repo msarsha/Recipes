@@ -8,6 +8,7 @@ module.exports = function (recipesResource, $q) {
 
   service.getAll = getAll;
   service.getOne = getOne;
+  service.save = save;
 
   function getAll(force) {
     if (!service.collection || force) {
@@ -23,7 +24,7 @@ module.exports = function (recipesResource, $q) {
 
   function getOne(id) {
     if (!id) {
-      return service.$q.reject("no id provided");
+      return service.$q.reject();
     }
 
     if (service.item && id == service.item.id) {
@@ -38,14 +39,26 @@ module.exports = function (recipesResource, $q) {
     }
 
     service.item = {};
+    var isFound = false;
 
     angular.forEach(service.collection, function (val, key) {
       if (val.id == id) {
         service.item = val;
+        isFound = true;
       }
     });
 
-    return service.$q.when(service.item);
-    return service.$q.reject("no item found");
+    if (isFound)
+      return service.$q.when(service.item);
+    return service.$q.reject();
+  }
+
+  function save() {
+    if (!service.item)
+      return service.$q.reject();
+
+    return recipesResource.save(service.item).then(function (data) {
+      return service.item = data;
+    })
   }
 }

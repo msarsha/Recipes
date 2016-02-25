@@ -1,5 +1,7 @@
 var angular = require('angular');
-var component = require('./newRecipeDialog.component');
+var service = require('./newRecipeDialog.service');
+
+require('./newRecipeDialog.css');
 
 module.exports = angular.module('recipesBook.newRecipeDialog', [])
-  .component('newRecipeDialog', component);
+  .service('rbDialog', service);
