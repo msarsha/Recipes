@@ -13,6 +13,7 @@ var toolbar = require('./components/toolbar/toolbar.module');
 var sidenav = require('./components/sidenav/sidenav.module');
 var recipes = require('./components/recipes/recipes.module');
 var dialog = require('./newRecipeDialog/newRecipeDialog.module');
+var recipeForm = require('./newRecipeForm/newRecipeForm.module');
 
 var helpers = require('./helpers/helpers.module');
 
@@ -29,7 +30,8 @@ angular.module('recipesBook', [
 		sidenav.name,
 		recipes.name,
     recipesDetails.name,
-    dialog.name
+    dialog.name,
+    recipeForm.name
 ])
   .component('app', appComponent)
   .config(function ($urlRouterProvider, $mdThemingProvider) {

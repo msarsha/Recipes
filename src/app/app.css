@@ -4,3 +4,7 @@
 .md-button .md-font{
 	display: inline !important;
 }
+
+body{
+  /*overflow-y: hidden !important;*/
+}

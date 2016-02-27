@@ -4,6 +4,7 @@ module.exports = function ($state) {
   service.filter = "";
   service.showSearchButton = false;
   service.showBackButton = false;
+  service.backButtonIcon = "fa fa-arrow-left";
   service.goBack = goBack;
   service.prevState = "";
 

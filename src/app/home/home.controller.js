@@ -26,10 +26,7 @@ module.exports = function (rbDialog, rbToolbar, recipesModel, $state) {
   
   function showDialog($event) {
     rbDialog.show($event).then(function (result) {
-      recipesModel.item = result.recipe;
-      recipesModel.save().then(function () {
-        console.log("saved");
-      });
+      
     });
   }
 };

@@ -1,0 +1,36 @@
+<md-content ng-cloak dir="rtl" layout-padding>
+  <form name="newRecipe" ng-submit="vm.save()">
+    <div class="md-dialog-content" layout="column">
+      <md-input-container>
+        <label>שם</label>
+        <input ng-model="vm.recipe.title" type="text"></input>
+      </md-input-container>
+      <md-input-container>
+        <label>אופן הכנה</label>
+        <textarea ng-model="vm.recipe.desc" type="text"></textarea>
+      </md-input-container>
+      <md-input-container>
+        <label>מצרכים</label>
+        <textarea ng-model="vm.recipe.ingrediant" type="text"></textarea>
+      </md-input-container>
+      <md-input-container>
+        <label>הערות</label>
+        <textarea ng-model="vm.recipe.remarks" type="text"></textarea>
+      </md-input-container>
+    </div>
+    <div layout="column">
+      <div layout="row">
+        <md-button type="submit" class="md-raised md-hue-1" flex>
+          <md-icon md-font-icon="fa fa-floppy-o"></md-icon>
+          שמור
+        </md-button>
+      </div>
+      <div layout="row">
+        <md-button ui-sref="home" class="md-raised md-hue-1" flex>
+          <md-icon md-font-icon="fa fa-ban"></md-icon>
+          בטל
+        </md-button>
+      </div>
+    </div>
+  </form>
+</md-content>
