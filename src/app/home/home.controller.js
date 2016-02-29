@@ -1,11 +1,10 @@
 var _ = require('lodash');
 
-module.exports = function (rbDialog, rbToolbar, recipesModel, $state) {
+module.exports = function (rbToolbar, recipesModel, $state) {
   var vm = this;
 
   vm.rbToolbar = rbToolbar;
   vm.goToDetails = goToDetails;
-  vm.showDialog = showDialog;
 
   init();
 
@@ -24,11 +23,5 @@ module.exports = function (rbDialog, rbToolbar, recipesModel, $state) {
     vm.rbToolbar.showSearchBar = false;
     vm.rbToolbar.filter = "";
     $state.go('recipe', { recipeId: id });
-  }
-
-  function showDialog($event) {
-    rbDialog.show($event).then(function (result) {
-
-    });
   }
 };
