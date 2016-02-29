@@ -23,3 +23,6 @@ dist/
 .idea
 out
 gen
+
+plugins/
+platforms/

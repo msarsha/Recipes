@@ -1,8 +1,8 @@
-<md-toolbar layout="row" class="md-whiteframe-7dp rb-toolbar" layout-padding ng-show="!vm.showSearch">
+<md-toolbar layout="row" class="md-whiteframe-7dp rb-toolbar" layout-padding ng-show="!vm.rbToolbar.showSearchBar">
   <div flex layout-align="start center" layout="row">
     <h4>{{vm.rbToolbar.title}}</h4>
     <span flex></span>
-    <md-button ng-show="vm.rbToolbar.showSearchButton" class="md-icon-button" ng-click="vm.showSearch = !vm.showSearch">
+    <md-button ng-show="vm.rbToolbar.showSearchButton" class="md-icon-button" ng-click="vm.rbToolbar.showSearchBar = !vm.rbToolbar.showSearchBar">
       <md-icon md-font-icon="fa fa-search"></md-icon>
     </md-button>
     <md-button ng-show="vm.rbToolbar.showBackButton" class="md-icon-button" ng-click="vm.goBack()">
@@ -11,7 +11,7 @@
   </div>
 </md-toolbar>
 
-<md-toolbar layout="row" class="md-whiteframe-7dp rb-toolbar md-accent" layout-padding ng-show="vm.showSearch">
+<md-toolbar layout="row" class="md-whiteframe-7dp rb-toolbar md-accent" layout-padding ng-show="vm.rbToolbar.showSearchBar">
   <div flex layout-align="start center" layout="row">
     <md-button class="md-icon-button" ng-click="vm.closeFilter()">
       <md-icon md-font-icon="fa fa-arrow-right"></md-icon>

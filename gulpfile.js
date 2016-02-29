@@ -96,6 +96,11 @@ gulp.task('template', function () {
 		.pipe(gulp.dest(destPath));
 });
 
+gulp.task('pg', function () {
+  gulp.src(config.paths.build + '/*.js')
+    .pipe(gulp.dest('./www'));
+});
+
 gulp.task('default', function () {
 	sync(['copy-html', 'build-js', 'serve'])
 });

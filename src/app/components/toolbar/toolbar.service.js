@@ -3,9 +3,12 @@ module.exports = function ($state) {
   service.title = "toolbar";
   service.filter = "";
   service.showSearchButton = false;
+  service.showSearchBar = false;
+
   service.showBackButton = false;
   service.backButtonIcon = "fa fa-arrow-left";
   service.goBack = goBack;
+
   service.prevState = "";
 
   function goBack() {

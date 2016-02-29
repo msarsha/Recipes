@@ -1,8 +1,8 @@
 module.exports = function (rbToolbar, rbSidenav) {
   var vm = this;
 
-  vm.showSearch = false;
   vm.rbToolbar = rbToolbar;
+  vm.rbToolbar.showSearchBar = false;
   vm.openSidenav = openSidenav;
   vm.closeFilter = closeFilter;
   vm.goBack = goBack;
@@ -12,7 +12,7 @@ module.exports = function (rbToolbar, rbSidenav) {
   }
   
   function closeFilter() {
-    vm.showSearch = !vm.showSearch;
+    vm.rbToolbar.showSearchBar = !vm.rbToolbar.showSearchBar;
     vm.rbToolbar.filter = "";
   }
   
