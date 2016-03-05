@@ -1,4 +1,4 @@
-module.exports = function (rbToolbar, recipesModel, $state, rbToast, $cordovaCamera) {
+module.exports = function (rbToolbar, recipesModel, $state, rbToast, rbCamera) {
   var vm = this;
   rbToolbar.title = "מתכון חדש";
   rbToolbar.showSearchButton = false;
@@ -17,14 +17,8 @@ module.exports = function (rbToolbar, recipesModel, $state, rbToast, $cordovaCam
   }
 
   function selectImage() {
-    var options = {
-      quality: 60,
-      sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
-      allowEdit: true
-    };
-
-    $cordovaCamera.getPicture(options).then(function (result) {
-      console.log(result);
+    rbCamera.getPicture().then(function (result) {
+      console.debug(result);
     });
   }
 };
