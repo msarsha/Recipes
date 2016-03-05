@@ -1,4 +1,5 @@
 var angular = require('angular');
+require('../ng-cordova.min.js');
 var ngMaterial = require('angular-material');
 var uiRouter = require('angular-ui-router');
 
@@ -17,21 +18,21 @@ var recipeForm = require('./newRecipeForm/newRecipeForm.module');
 var helpers = require('./helpers/helpers.module');
 
 angular.module('recipesBook', [
-    ngMaterial,
-    uiRouter,
-    'ngCordova',
+  ngMaterial,
+  uiRouter,
+  'ngCordova',
 
-    models.name,
-    resources.name,
-    helpers.name,
+  models.name,
+  resources.name,
+  helpers.name,
 
-    home.name,
-    toolbar.name,
-    sidenav.name,
-    recipes.name,
-    recipesDetails.name,
-    recipeForm.name
-  ])
+  home.name,
+  toolbar.name,
+  sidenav.name,
+  recipes.name,
+  recipesDetails.name,
+  recipeForm.name
+])
   .component('app', appComponent)
   .config(function ($urlRouterProvider, $mdThemingProvider) {
     $urlRouterProvider.otherwise('/');
@@ -40,3 +41,19 @@ angular.module('recipesBook', [
       .primaryPalette('teal')
       .accentPalette('orange');
   });
+
+
+init();
+
+function init() {
+  if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|IEMobile)/)) {
+    document.addEventListener("deviceready", onDeviceReady, false);
+  } else {
+    onDeviceReady();
+  }
+}
+
+// manual bootstrap of the angular app after the deviceready event is fired (phonegap)
+function onDeviceReady() {
+  angular.bootstrap(document, ['recipesBook']);
+}
