@@ -15,11 +15,7 @@
       <p class="md-caption">{{::vm.recipe.desc}}</p>
     </div>
     <div flex="35" layout="column" layout-padding class="recipe-gallery">
-      <div bg-image="http://lorempixel.com/image_output/food-q-c-500-500-7.jpg" class="recipe-thumb"></div>
-      <div bg-image="http://lorempixel.com/image_output/food-q-c-500-500-7.jpg" class="recipe-thumb"></div>
-      <div bg-image="http://lorempixel.com/image_output/food-q-c-500-500-7.jpg" class="recipe-thumb"></div>
-      <div bg-image="http://lorempixel.com/image_output/food-q-c-500-500-7.jpg" class="recipe-thumb"></div>
-      <div bg-image="http://lorempixel.com/image_output/food-q-c-500-500-7.jpg" class="recipe-thumb"></div>
+      <div bg-image="{{image}}" ng-repeat="image in vm.recipe.images track by $index" class="recipe-thumb"></div>
     </div>
   </div>
 </div>

@@ -18,6 +18,11 @@
         <textarea ng-model="vm.recipe.remarks" type="text"></textarea>
       </md-input-container>
     </div>
+
+    <div layout="row" layout-padding class="recipe-image-list" ng-hide="!vm.recipe.images">
+      <div bg-image="{{image}}" ng-repeat="image in vm.recipe.images track by $index" class="recipe-image"></div>
+    </div>
+
     <div layout="column">
       <div layout="row">
         <md-button type="submit" class="md-raised md-hue-1" flex>

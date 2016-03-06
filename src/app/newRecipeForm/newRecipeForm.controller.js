@@ -3,6 +3,7 @@ module.exports = function (rbToolbar, recipesModel, $state, rbToast, rbCamera) {
   rbToolbar.title = "מתכון חדש";
   rbToolbar.showSearchButton = false;
   rbToolbar.showBackButton = false;
+  vm.recipe = {};
 
   vm.save = save;
   vm.selectImage = selectImage;
@@ -18,7 +19,11 @@ module.exports = function (rbToolbar, recipesModel, $state, rbToast, rbCamera) {
 
   function selectImage() {
     rbCamera.getPicture().then(function (result) {
-      console.debug(result);
+      if (!vm.recipe.images) {
+        vm.recipe.images = [];
+      }
+      
+      vm.recipe.images.push(result);
     });
   }
 };

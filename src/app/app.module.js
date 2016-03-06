@@ -43,17 +43,17 @@ angular.module('recipesBook', [
   });
 
 
-init();
+// init();
 
-function init() {
-  if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|IEMobile)/)) {
-    document.addEventListener("deviceready", onDeviceReady, false);
-  } else {
-    onDeviceReady();
-  }
-}
+// function init() {
+//   if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|IEMobile)/)) {
+//     document.addEventListener("deviceready", onDeviceReady, false);
+//   } else {
+//     onDeviceReady();
+//   }
+// }
 
-// manual bootstrap of the angular app after the deviceready event is fired (phonegap)
-function onDeviceReady() {
-  angular.bootstrap(document, ['recipesBook']);
-}
+// // manual bootstrap of the angular app after the deviceready event is fired (phonegap)
+// function onDeviceReady() {
+//   angular.bootstrap(document, ['recipesBook']);
+// }

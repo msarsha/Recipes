@@ -1,3 +1,17 @@
-.square-button{
-  
+.recipe-image-list .recipe-image{
+  min-width: 100px;
+  min-height: 100px;
+  padding: 0;
+  margin-left: 5px;
+}
+
+.recipe-image-list .recipe-image {
+  border: 2px #009688 solid;
+}
+
+.recipe-image-list{
+  overflow: scroll;
+  margin-top: 7px;
+  height: auto;
+  margin-left: 4px;
 }
