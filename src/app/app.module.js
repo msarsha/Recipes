@@ -15,7 +15,7 @@ var sidenav = require('./components/sidenav/sidenav.module');
 var recipes = require('./components/recipes/recipes.module');
 var recipeForm = require('./newRecipeForm/newRecipeForm.module');
 
-var common = require('./helpers/common.module');
+var common = require('./common/common.module');
 
 angular.module('recipesBook', [
   ngMaterial,
