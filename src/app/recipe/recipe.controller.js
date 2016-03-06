@@ -1,9 +1,11 @@
-module.exports = function ($state, rbToolbar) {
+module.exports = function ($state, rbToolbar, $window) {
   var vm = this;
 
   vm.greeting = "recipe";
+  
   vm.rbToolbar = rbToolbar;
   vm.goBack = goBack;
+  vm.enlarge = enlarge;
 
   init();
 
@@ -17,5 +19,8 @@ module.exports = function ($state, rbToolbar) {
     $state.go('home');
   }
 
+  function enlarge(image) {
+    $window.location.href = image;
+  }
 
 };

@@ -4,10 +4,11 @@ module.exports = function ($cordovaCamera) {
 
   service.getPicture = function () {
     var options = {
-      quality: 40,
+      quality: 20,
       sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
-      // targetHeight: 600,
-      // targetWidth: 800,
+      targetHeight: 720,
+      targetWidth: 1280,
+      correctOrientation: true
       // allowEdit: true
     };
 

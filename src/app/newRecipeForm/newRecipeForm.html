@@ -19,8 +19,15 @@
       </md-input-container>
     </div>
 
-    <div layout="row" layout-padding class="recipe-image-list" ng-hide="!vm.recipe.images">
-      <div bg-image="{{image}}" ng-repeat="image in vm.recipe.images track by $index" class="recipe-image"></div>
+    <div layout="row" class="recipe-images-list-container">
+      <div layout="column" layout-align="center center" style="margin-top:7px;">
+        <md-button ng-click="vm.selectImage()" class="md-hue-3 square-button">
+          <md-icon md-font-icon="fa fa-plus"></md-icon>
+        </md-button>
+      </div>
+      <div layout="row" class="recipe-image-list" ng-hide="!vm.recipe.images">
+        <div bg-image="{{image}}" ng-repeat="image in vm.recipe.images track by $index" class="recipe-image"></div>
+      </div>
     </div>
 
     <div layout="column">
@@ -34,12 +41,6 @@
         <md-button ui-sref="home" class="md-raised md-hue-1" flex>
           <md-icon md-font-icon="fa fa-ban"></md-icon>
           בטל
-        </md-button>
-      </div>
-      <div layout="row">
-        <md-button ng-click="vm.selectImage()" class="md-hue-3 square-button" flex>
-          <md-icon md-font-icon="fa fa-camera"></md-icon>
-          Image
         </md-button>
       </div>
     </div>

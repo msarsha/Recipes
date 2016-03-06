@@ -4,6 +4,12 @@ module.exports = function (rbToolbar, recipesModel, $state, rbToast, rbCamera) {
   rbToolbar.showSearchButton = false;
   rbToolbar.showBackButton = false;
   vm.recipe = {};
+  
+  // vm.recipe.images = [
+  //   'http://www.zastavki.com/pictures/1680x1050/2011/Food_Pizza_Delicious_pizza_029580_.jpg',
+  //   'http://www.zastavki.com/pictures/1680x1050/2011/Food_Pizza_Delicious_pizza_029580_.jpg',
+  //   'http://www.zastavki.com/pictures/1680x1050/2011/Food_Pizza_Delicious_pizza_029580_.jpg'
+  // ];
 
   vm.save = save;
   vm.selectImage = selectImage;

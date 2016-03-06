@@ -34,8 +34,21 @@ angular.module('recipesBook', [
   recipeForm.name
 ])
   .component('app', appComponent)
-  .config(function ($urlRouterProvider, $mdThemingProvider) {
+  .config(function ($urlRouterProvider, $mdThemingProvider, $stateProvider) {
     $urlRouterProvider.otherwise('/');
+    
+    $stateProvider.state('image', {
+      url: '/image/:image',
+      template: '<img ng-src="{{image}}"></img>',
+      controller: function (image) {
+        
+      },
+      resolve: {
+        image: function ($stateParams) {
+          return $stateParams.image;
+        }
+      }
+    })
 
     $mdThemingProvider.theme('default')
       .primaryPalette('teal')
@@ -43,17 +56,17 @@ angular.module('recipesBook', [
   });
 
 
-// init();
+init();
 
-// function init() {
-//   if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|IEMobile)/)) {
-//     document.addEventListener("deviceready", onDeviceReady, false);
-//   } else {
-//     onDeviceReady();
-//   }
-// }
+function init() {
+  if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|IEMobile)/)) {
+    document.addEventListener("deviceready", onDeviceReady, false);
+  } else {
+    onDeviceReady();
+  }
+}
 
-// // manual bootstrap of the angular app after the deviceready event is fired (phonegap)
-// function onDeviceReady() {
-//   angular.bootstrap(document, ['recipesBook']);
-// }
+// manual bootstrap of the angular app after the deviceready event is fired (phonegap)
+function onDeviceReady() {
+  angular.bootstrap(document, ['recipesBook']);
+}
