@@ -38,14 +38,15 @@ angular.module('recipesBook', [
     $urlRouterProvider.otherwise('/');
     
     $stateProvider.state('image', {
-      url: '/image/:image',
-      template: '<img ng-src="{{image}}"></img>',
-      controller: function (image) {
-        
+      url: '/image/:imageUrl',
+      template: '<img src="{{url}}"></img>',
+      controller: function ($scope, rbToolbar, imageUrl) {
+          $scope.url = imageUrl;
+          rbToolbar.title = "תמונה";
       },
       resolve: {
-        image: function ($stateParams) {
-          return $stateParams.image;
+        imageUrl: function ($stateParams) {
+          return $stateParams.imageUrl;
         }
       }
     })

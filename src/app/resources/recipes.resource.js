@@ -15,7 +15,7 @@ module.exports = function ($q, $http) {
       return {
         id: i,
         imagePath: 'http://lorempixel.com/800/600/food/',
-        images: ['http://www.zastavki.com/pictures/1680x1050/2011/Food_Pizza_Delicious_pizza_029580_.jpg','http://www.zastavki.com/pictures/1680x1050/2011/Food_Pizza_Delicious_pizza_029580_.jpg', 'http://www.zastavki.com/pictures/1680x1050/2011/Food_Pizza_Delicious_pizza_029580_.jpg', 'http://www.zastavki.com/pictures/1680x1050/2011/Food_Pizza_Delicious_pizza_029580_.jpg'],
+        images: ['http://lorempixel.com/800/600/food/','http://www.zastavki.com/pictures/1680x1050/2011/Food_Pizza_Delicious_pizza_029580_.jpg', 'http://www.zastavki.com/pictures/1680x1050/2011/Food_Pizza_Delicious_pizza_029580_.jpg', 'http://www.zastavki.com/pictures/1680x1050/2011/Food_Pizza_Delicious_pizza_029580_.jpg'],
         desc: "להקציף, לערבב ולהכניס לתנור להקציף, לערבב ולהכניס לתנור להקציף, לערבב ולהכניס לתנור להקציף, לערבב ולהכניס לתנור \n להקציף, לערבב ולהכניס לתנור \n להקציף, לערבב ולהכניס לתנור",
         title: "מתכון " + i
       }

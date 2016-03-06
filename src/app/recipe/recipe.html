@@ -15,7 +15,7 @@
       <p class="md-caption">{{::vm.recipe.desc}}</p>
     </div>
     <div flex="35" layout="column" layout-padding class="recipe-gallery">
-      <div bg-image="{{image}}" ng-repeat="image in vm.recipe.images track by $index" class="recipe-thumb" ui-sref="image({image: image})"></div>
+      <div bg-image="{{image}}" ng-repeat="image in vm.recipe.images track by $index" class="recipe-thumb" ui-sref="image({imageUrl: image})"></div>
     </div>
   </div>
 </div>
